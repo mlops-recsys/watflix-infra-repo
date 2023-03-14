@@ -72,14 +72,29 @@ module "eks" {
 
   aws_auth_users = [
     {
-      userarn  = "arn:aws:iam::<AWS어카운트ID>:user/edu_1"
+      userarn  = "arn:aws:iam::509197451672:user/edu_1"
       username = "edu_1"
+      groups   = ["system:masters"]
+    },
+     {
+      userarn  = "arn:aws:iam::509197451672:user/edu_2"
+      username = "edu_2"
+      groups   = ["system:masters"]
+    },
+     {
+      userarn  = "arn:aws:iam::509197451672:user/edu_3"
+      username = "edu_3"
+      groups   = ["system:masters"]
+    },
+    {
+      userarn  = "arn:aws:iam::509197451672:user/edu_4"
+      username = "edu_4"
       groups   = ["system:masters"]
     },
   ]
 
   aws_auth_accounts = [
-    "<AWS어카운트ID>"
+    "509197451672"
   ]
 }
 
