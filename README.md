@@ -1,4 +1,4 @@
-# fast-test-infra-repo
+# watflix-infra-info
 terraform code repo
 
 폴더 구조 

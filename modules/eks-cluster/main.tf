@@ -98,7 +98,7 @@ module "eks" {
   ]
 }
 
-// 프라이빗 서브넷 태그
+// 프라이빗 서브넷 태그  #이부분이 없으면 load balancer를 만들 서브넷을 discovery하지못함 
 resource "aws_ec2_tag" "private_subnet_tag" {
   for_each    = toset(local.private_subnets)
   resource_id = each.value
